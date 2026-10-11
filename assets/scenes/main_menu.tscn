@@ -82,13 +82,6 @@ text = "GWD #98"
 label_settings = SubResource("LabelSettings_57ux2")
 horizontal_alignment = 1
 
-[node name="Container" type="Container" parent="." unique_id=799170009]
-layout_mode = 0
-offset_left = 792.0
-offset_top = 40.0
-offset_right = 1120.0
-offset_bottom = 616.0
-
 [node name="ButtonsList" type="Control" parent="." unique_id=1079238384]
 anchors_preset = 0
 offset_right = 40.0
