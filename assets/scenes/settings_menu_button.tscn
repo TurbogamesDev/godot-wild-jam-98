@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://rs0nooykw580"]
+
+[ext_resource type="PackedScene" uid="uid://blm73icgjxwy3" path="res://assets/scenes/base_menu_button.tscn" id="1_5wq5t"]
+[ext_resource type="Script" uid="uid://cm2ry7apfde2j" path="res://assets/scripts/settings_menu_button.gd" id="2_cr21t"]
+
+[node name="SettingsMenuButton" unique_id=2067039380 instance=ExtResource("1_5wq5t")]
+script = ExtResource("2_cr21t")
+
+[node name="Text" parent="." index="0" unique_id=491951735]
+text = "Settings"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
