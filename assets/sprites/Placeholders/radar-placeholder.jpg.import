@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b355xd4xjsm4o"
-path="res://.godot/imported/MCv2.png-cbd4f238fd35f751a9fbe582e7864352.ctex"
+uid="uid://bm8tunmqyq4h"
+path="res://.godot/imported/radar-placeholder.jpg-d556b3dae43167c632a7ea91eb484adc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MCv2.png"
-dest_files=["res://.godot/imported/MCv2.png-cbd4f238fd35f751a9fbe582e7864352.ctex"]
+source_file="res://assets/sprites/Placeholders/radar-placeholder.jpg"
+dest_files=["res://.godot/imported/radar-placeholder.jpg-d556b3dae43167c632a7ea91eb484adc.ctex"]
 
 [params]
 
