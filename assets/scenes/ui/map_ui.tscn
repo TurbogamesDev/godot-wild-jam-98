@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dwmmcuftj3h4m"]
+
+[ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/signal-related/map_ui.gd" id="1_c4sru"]
+[ext_resource type="Texture2D" uid="uid://cc7wtak1eor4o" path="res://assets/sprites/Placeholders/maze-template.png" id="1_d3pir"]
+[ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="2_c4sru"]
+
+[node name="Map_UI" type="Control" unique_id=376815417 groups=["map"]]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c4sru")
+
+[node name="Map_Image" type="TextureRect" parent="." unique_id=1235556896]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 1923.0
+offset_bottom = 1083.0
+texture = ExtResource("1_d3pir")
+
+[node name="Player Icon" type="TextureRect" parent="." unique_id=2095975135]
+z_index = 1
+layout_mode = 0
+offset_left = 844.0
+offset_top = 446.0
+offset_right = 972.0
+offset_bottom = 574.0
+texture = ExtResource("2_c4sru")
