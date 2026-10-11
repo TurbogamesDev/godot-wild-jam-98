@@ -1,11 +1,34 @@
 [gd_scene format=3 uid="uid://bb2p0mvpywl2e"]
 
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_d2kkn"]
+[ext_resource type="PackedScene" uid="uid://l3cbwgo7cb1b" path="res://assets/scenes/ui/control_remap_item.tscn" id="1_syw1e"]
+[ext_resource type="PackedScene" uid="uid://dnelf82owdqyt" path="res://assets/scenes/ui/close_button.tscn" id="3_4jyve"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xepy2"]
 bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
 corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ae4r"]
+bg_color = Color(0, 0, 0, 0.33333334)
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bveri"]
+bg_color = Color(0, 0, 0, 0.5686275)
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jyve"]
+bg_color = Color(0, 0, 0, 0.4509804)
+corner_radius_top_right = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qc24j"]
+bg_color = Color(0, 0, 0, 0.33333334)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8dto7"]
+font = ExtResource("1_d2kkn")
+font_size = 36
 
 [node name="SettingsMenu" type="Control" unique_id=860343429]
 z_index = 100
@@ -31,3 +54,55 @@ offset_top = 64.0
 offset_right = 768.0
 offset_bottom = 576.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_xepy2")
+
+[node name="CloseButton" parent="Panel" unique_id=1812870772 node_paths=PackedStringArray("controlToClose") instance=ExtResource("3_4jyve")]
+layout_mode = 0
+offset_left = 352.0
+offset_right = 384.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ae4r")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bveri")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4jyve")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bveri")
+controlToClose = NodePath("../..")
+
+[node name="Section_1" type="Label" parent="Panel" unique_id=589778024]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 384.0
+offset_bottom = 96.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qc24j")
+text = "Keybinds"
+label_settings = SubResource("LabelSettings_8dto7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlRemapItem_1" parent="Panel/Section_1" unique_id=158876102 instance=ExtResource("1_syw1e")]
+z_index = 30
+layout_mode = 1
+offset_top = 64.0
+offset_right = 0.0
+offset_bottom = 64.0
+actionName = "up"
+
+[node name="ControlRemapItem_2" parent="Panel/Section_1" unique_id=934737344 instance=ExtResource("1_syw1e")]
+z_index = 30
+layout_mode = 1
+offset_top = 128.0
+offset_right = 0.0
+offset_bottom = 128.0
+actionName = "left"
+
+[node name="ControlRemapItem_3" parent="Panel/Section_1" unique_id=571474417 instance=ExtResource("1_syw1e")]
+z_index = 30
+layout_mode = 1
+offset_top = 192.0
+offset_right = 0.0
+offset_bottom = 192.0
+
+[node name="ControlRemapItem_4" parent="Panel/Section_1" unique_id=1480078039 instance=ExtResource("1_syw1e")]
+z_index = 30
+layout_mode = 1
+offset_top = 256.0
+offset_right = 0.0
+offset_bottom = 256.0
+actionName = "right"

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dnelf82owdqyt"]
+
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_f4do6"]
+[ext_resource type="Script" uid="uid://r4kvohubutqo" path="res://assets/scripts/ui_script/close_button.gd" id="2_3ae4r"]
+
+[node name="CloseButton" type="Button" unique_id=1812870772]
+offset_right = 32.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("1_f4do6")
+theme_override_font_sizes/font_size = 16
+text = "X"
+script = ExtResource("2_3ae4r")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
