@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://blm73icgjxwy3"]
+
+[ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="1_ni45p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qc24j"]
+bg_color = Color(0.93333334, 0.93333334, 0.93333334, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("1_ni45p")
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+
+[node name="BaseMenuButton" type="Button" unique_id=2067039380]
+offset_left = -128.0
+offset_top = -32.0
+offset_right = 128.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qc24j")
+
+[node name="Text" type="Label" parent="." unique_id=491951735]
+z_index = 1
+layout_mode = 0
+offset_left = 64.0
+offset_right = 224.0
+offset_bottom = 64.0
+text = "Play"
+label_settings = SubResource("LabelSettings_xepy2")
+horizontal_alignment = 2
+vertical_alignment = 1

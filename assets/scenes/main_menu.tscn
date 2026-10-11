@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://di4g3ylys8i0x"]
+
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_uu6ob"]
+[ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="2_v1ppo"]
+[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/play_menu_button.tscn" id="3_obrqb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qc24j"]
+bg_color = Color(0, 0.3764706, 0.3764706, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+line_spacing = -36.0
+font = ExtResource("1_uu6ob")
+font_size = 72
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obrqb"]
+bg_color = Color(0, 0.2509804, 0.2509804, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_57ux2"]
+line_spacing = -36.0
+font = ExtResource("2_v1ppo")
+font_size = 36
+
+[node name="MainMenu" type="Control" unique_id=2126880535]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1157299253]
+z_index = -50
+z_as_relative = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.32321265, 0.32321244, 0.3232125, 1)
+
+[node name="Title" type="Panel" parent="." unique_id=1234938956]
+z_index = -40
+z_as_relative = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 736.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qc24j")
+
+[node name="Text" type="Label" parent="Title" unique_id=2141784356]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 680.0
+offset_bottom = 192.0
+text = "FIND MY
+GAME NAME"
+label_settings = SubResource("LabelSettings_xepy2")
+
+[node name="GWJ98" type="Panel" parent="." unique_id=1156319785]
+z_index = -45
+z_as_relative = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 192.0
+offset_right = 256.0
+offset_bottom = 280.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_obrqb")
+
+[node name="Text" type="Label" parent="GWJ98" unique_id=103356615]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 216.0
+offset_bottom = 86.0
+text = "GWD #98"
+label_settings = SubResource("LabelSettings_57ux2")
+horizontal_alignment = 1
+
+[node name="ButtonsList" type="Control" parent="." unique_id=1079238384]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayMenuButton" parent="ButtonsList" unique_id=2067039380 instance=ExtResource("3_obrqb")]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 520.0
+offset_right = 1088.0
+offset_bottom = 584.0
