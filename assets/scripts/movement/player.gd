@@ -3,6 +3,25 @@ extends CharacterBody2D
 @export var speed = 120
 @onready var _animated_sprite = $AnimatedSprite2D
 
+signal signal_changed(has_signal: bool)
+
+var signal_zones := 0
+var has_signal := false
+
+func enter_signal_zone() -> void:
+	signal_zones += 1
+	_update_signal()
+
+func exit_signal_zone() -> void:
+	signal_zones -= 1
+	_update_signal()
+
+func _update_signal() -> void:
+	var new_state := signal_zones > 0
+	if new_state != has_signal:
+		has_signal = new_state
+		signal_changed.emit(has_signal)
+
 func _ready():
 	_animated_sprite.play("front")
 
