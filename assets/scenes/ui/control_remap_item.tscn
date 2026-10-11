@@ -7,7 +7,7 @@
 font = ExtResource("2_ym2ta")
 font_size = 32
 
-[node name="ControlRemapItem" type="Control" unique_id=158876102]
+[node name="ControlRemapItem" type="Control" unique_id=158876102 node_paths=PackedStringArray("remapButton", "actionNameLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,6 +17,9 @@ offset_bottom = -584.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oa4u0")
+actionName = "down"
+remapButton = NodePath("Button")
+actionNameLabel = NodePath("Label")
 
 [node name="Label" type="Label" parent="." unique_id=1088784247]
 layout_mode = 1
@@ -49,3 +52,5 @@ theme_override_fonts/font = ExtResource("2_ym2ta")
 theme_override_font_sizes/font_size = 23
 text = "Space"
 text_overrun_behavior = 5
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]
