@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_uu6ob"]
 [ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="2_v1ppo"]
 [ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/play_menu_button.tscn" id="3_obrqb"]
+[ext_resource type="PackedScene" uid="uid://rs0nooykw580" path="res://assets/scenes/settings_menu_button.tscn" id="4_f2xsc"]
+[ext_resource type="PackedScene" uid="uid://bb2p0mvpywl2e" path="res://assets/scenes/settings_menu.tscn" id="5_v71do"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qc24j"]
 bg_color = Color(0, 0.3764706, 0.3764706, 1)
@@ -94,3 +96,15 @@ offset_left = 832.0
 offset_top = 520.0
 offset_right = 1088.0
 offset_bottom = 584.0
+
+[node name="SettingsMenuButton" parent="ButtonsList" unique_id=953190076 node_paths=PackedStringArray("settingsMenuScene") instance=ExtResource("4_f2xsc")]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 440.0
+offset_right = 1088.0
+offset_bottom = 504.0
+settingsMenuScene = NodePath("../../SettingsMenu")
+
+[node name="SettingsMenu" parent="." unique_id=860343429 instance=ExtResource("5_v71do")]
+visible = false
+layout_mode = 1
