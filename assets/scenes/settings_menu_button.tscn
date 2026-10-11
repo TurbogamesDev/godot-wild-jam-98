@@ -8,3 +8,5 @@ script = ExtResource("2_cr21t")
 
 [node name="Text" parent="." index="0" unique_id=491951735]
 text = "Settings"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
