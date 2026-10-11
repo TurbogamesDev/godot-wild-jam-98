@@ -24,6 +24,8 @@ const CONTROLLER_LABELS: Dictionary = {
 @export var remapButton: Button
 @export var actionNameLabel: Label
 
+var lock = false
+
 func _ready() -> void:
 	actionNameLabel.text = actionName
 
@@ -49,23 +51,35 @@ func get_current_control_keybind():
 			return OS.get_keycode_string(input.physical_keycode)
 
 func _on_button_toggled(toggled_on: bool) -> void:
+	if lock:
+		return
+
+	lock = true
+
 	if !actionName or !InputMap.has_action(actionName):
+		lock = false
 		return
 
 	if toggled_on:
 		remapButton.text = "..."
+		lock = false
 		return
 
 	if actionEventIndex >= InputMap.action_get_events(actionName).size():
 		remapButton.text = "None"
+		lock = false
 		return
 
 	remapButton.text = get_current_control_keybind()
 
-func _unhandled_input(event: InputEvent) -> void:
+	remapButton.release_focus()
+
+	lock = false
+
+func _input(event: InputEvent) -> void:
 	if !InputMap.has_action(actionName) or !remapButton.is_pressed():
 		return
-
+	
 	if event.is_pressed() and (event is InputEventKey or event is InputEventJoypadButton):
 		var action_events_list = InputMap.action_get_events(actionName)
 
@@ -78,10 +92,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		remapButton.button_pressed = false
 
-		release_focus()
-
-func _input(event: InputEvent) -> void:
+# func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		remapButton.button_pressed = false
 
-		release_focus()
+		remapButton.release_focus()
