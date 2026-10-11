@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cc7wtak1eor4o" path="res://assets/sprites/Placeholders/maze-template.png" id="1_d3pir"]
 [ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="2_c4sru"]
 
-[node name="Map_UI" type="Control" unique_id=376815417]
+[node name="Map_UI" type="Control" unique_id=376815417 groups=["map"]]
 visible = false
 layout_mode = 3
 anchors_preset = 15
