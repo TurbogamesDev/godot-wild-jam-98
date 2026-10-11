@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://l3cbwgo7cb1b"]
+
+[ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="1_2iljp"]
+[ext_resource type="Script" uid="uid://bqmfof6rk4utp" path="res://assets/scripts/ui_script/control_remap_item.gd" id="1_8mf7i"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("1_2iljp")
+font_size = 32
+
+[node name="ControlRemapItem" type="Control" unique_id=158876102]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -768.0
+offset_bottom = -584.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8mf7i")
+
+[node name="Label" type="Label" parent="." unique_id=1088784247]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -32.0
+offset_right = 256.0
+offset_bottom = 32.0
+grow_vertical = 2
+text = "Action Name"
+label_settings = SubResource("LabelSettings_xepy2")
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=121700562]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -24.0
+offset_right = -16.0
+offset_bottom = 24.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2iljp")
+theme_override_font_sizes/font_size = 23
+text = "Space"
+text_overrun_behavior = 5
