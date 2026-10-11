@@ -7,6 +7,7 @@ signal signal_changed(has_signal: bool)
 
 var signal_zones := 0
 var has_signal := false
+## Signal related functions
 
 func enter_signal_zone() -> void:
 	signal_zones += 1
@@ -22,6 +23,7 @@ func _update_signal() -> void:
 		has_signal = new_state
 		signal_changed.emit(has_signal)
 
+## Movement and sprite related functions
 func _ready():
 	_animated_sprite.play("front")
 
