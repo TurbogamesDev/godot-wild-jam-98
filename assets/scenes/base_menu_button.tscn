@@ -24,8 +24,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_qc24j")
 [node name="Text" type="Label" parent="." unique_id=491951735]
 z_index = 1
 layout_mode = 0
-offset_left = 64.0
-offset_right = 224.0
+offset_left = 32.0
+offset_right = 240.0
 offset_bottom = 64.0
 text = "Play"
 label_settings = SubResource("LabelSettings_xepy2")
