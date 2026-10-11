@@ -2,9 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_uu6ob"]
 [ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="2_v1ppo"]
-[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/play_menu_button.tscn" id="3_obrqb"]
-[ext_resource type="PackedScene" uid="uid://rs0nooykw580" path="res://assets/scenes/settings_menu_button.tscn" id="4_f2xsc"]
-[ext_resource type="PackedScene" uid="uid://bb2p0mvpywl2e" path="res://assets/scenes/settings_menu.tscn" id="5_v71do"]
+[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/ui/play_menu_button.tscn" id="3_obrqb"]
+[ext_resource type="PackedScene" uid="uid://rs0nooykw580" path="res://assets/scenes/ui/settings_menu_button.tscn" id="4_f2xsc"]
+[ext_resource type="PackedScene" uid="uid://bb2p0mvpywl2e" path="res://assets/scenes/ui/settings_menu.tscn" id="5_v71do"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qc24j"]
 bg_color = Color(0, 0.3764706, 0.3764706, 1)
