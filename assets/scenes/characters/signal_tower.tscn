@@ -14,8 +14,9 @@ script = ExtResource("1_tnm16")
 shape = SubResource("CircleShape2D_3hfh6")
 
 [node name="signal_sprite" type="Sprite2D" parent="signal_area" unique_id=488194087]
+modulate = Color(1, 1, 1, 0.105882354)
 position = Vector2(3.8146973e-06, -1.0000001)
-scale = Vector2(0.34034032, 0.322)
+scale = Vector2(0.35435435, 0.33)
 texture = ExtResource("1_xthws")
 
 [node name="tower_sprite" type="Sprite2D" parent="." unique_id=1909462668]
