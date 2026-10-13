@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://djtxrgbi6w7cw"]
+
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_bin1o"]
+[ext_resource type="Script" uid="uid://cdi22ptvq0pqv" path="res://assets/scripts/ui_script/level_hud.gd" id="1_jwr2b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("1_bin1o")
+font_size = 36
+
+[node name="LevelHUD" type="Control" unique_id=2049856995 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jwr2b")
+label = NodePath("Label")
+
+[node name="Label" type="Label" parent="." unique_id=1760243260]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -576.0
+offset_right = -15.0
+offset_bottom = 72.0
+grow_horizontal = 0
+text = "NO SIGNAL"
+label_settings = SubResource("LabelSettings_xepy2")
+horizontal_alignment = 2
