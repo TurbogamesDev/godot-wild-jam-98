@@ -106,3 +106,11 @@ offset_top = 256.0
 offset_right = 0.0
 offset_bottom = 256.0
 actionName = "right"
+
+[node name="ControlRemapItem_5" parent="Panel/Section_1" unique_id=84844192 instance=ExtResource("1_syw1e")]
+z_index = 30
+layout_mode = 1
+offset_top = 320.0
+offset_right = 0.0
+offset_bottom = 320.0
+actionName = "toggle_map"
