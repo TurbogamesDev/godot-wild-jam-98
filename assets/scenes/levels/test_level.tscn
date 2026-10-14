@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cc7wtak1eor4o" path="res://assets/sprites/Placeholders/maze-template.png" id="4_gd6r1"]
 [ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/signal-related/map_ui.gd" id="4_nll7m"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="5_00oio"]
-[ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_lutq8"]
+[ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_lutq8"]
+[ext_resource type="PackedScene" uid="uid://3rd1svyqksir" path="res://assets/scenes/ui/level_hud.tscn" id="7_lutq8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8jk6n"]
 texture = ExtResource("2_5qmb5")
@@ -124,7 +125,6 @@ position = Vector2(262.83942, 561.3389)
 position = Vector2(1497.8577, 396.68646)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1754502190]
-visible = false
 
 [node name="MapUI" type="Control" parent="CanvasLayer" unique_id=434076267]
 propagate_maximum_size = true
@@ -149,12 +149,13 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="CanvasLayer/MapUI/SubViewportContainer" unique_id=1958771113]
 handle_input_locally = false
 size = Vector2i(1152, 648)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MapUI/SubViewportContainer/SubViewport" unique_id=57806900]
+texture_filter = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("4_gd6r1")
+texture = ExtResource("5_lutq8")
 
 [node name="Camera2D" type="Camera2D" parent="CanvasLayer/MapUI/SubViewportContainer/SubViewport" unique_id=318113429]
 limit_left = 0
