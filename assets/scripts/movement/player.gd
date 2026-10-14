@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-@export var speed = 1200
+@export var speed = 120
 @onready var _animated_sprite = $AnimatedSprite2D
 
 signal signal_changed(has_signal: bool)
