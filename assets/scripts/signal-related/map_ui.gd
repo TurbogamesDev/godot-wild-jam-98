@@ -13,7 +13,7 @@ signal map_open
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	cam.zoom = Vector2(1.2, 1.2)
+	cam.zoom = Vector2(1.5, 1.5)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 

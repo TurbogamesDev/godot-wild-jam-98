@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c5e5bd2onbxr8"]
 
 [ext_resource type="Script" uid="uid://bivxeoc8fvifl" path="res://assets/scripts/signal-related/signal_tower.gd" id="1_tnm16"]
-[ext_resource type="Texture2D" uid="uid://bm8tunmqyq4h" path="res://assets/sprites/Placeholders/radar-placeholder.jpg" id="1_xthws"]
+[ext_resource type="Texture2D" uid="uid://bd5fvyt2e4jc" path="res://assets/sprites/Placeholders/friis-radar-333574.png" id="2_bpkwn"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="2_tnm16"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3hfh6"]
-radius = 177.13837
+radius = 106.01887
 
 [node name="Signal_Tower" type="Area2D" unique_id=394025046]
 script = ExtResource("1_tnm16")
@@ -16,8 +16,8 @@ shape = SubResource("CircleShape2D_3hfh6")
 [node name="signal_sprite" type="Sprite2D" parent="signal_area" unique_id=488194087]
 modulate = Color(1, 1, 1, 0.105882354)
 position = Vector2(3.8146973e-06, -1.0000001)
-scale = Vector2(0.35435435, 0.33)
-texture = ExtResource("1_xthws")
+scale = Vector2(0.123333335, 0.121666655)
+texture = ExtResource("2_bpkwn")
 
 [node name="tower_sprite" type="Sprite2D" parent="." unique_id=1909462668]
 texture = ExtResource("2_tnm16")
