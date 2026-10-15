@@ -473,6 +473,7 @@ player = NodePath("../../player")
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
+visible = false
 light_mask = 2
 z_index = 10
 material = SubResource("ShaderMaterial_n0d4k")

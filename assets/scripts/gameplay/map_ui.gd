@@ -8,8 +8,7 @@ extends Control
 
 var map_scale := 1.0
 var is_in_range := false
-
-signal map_open
+var ping_timer := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,8 +32,16 @@ func _on_player_signal_changed(has_signal: bool) -> void:
 	is_in_range = has_signal
 
 func _process(delta: float) -> void:
+	#Update your position to the enemies every X seconds
+	if player.map_open and player.has_signal:
+		ping_timer -= delta
+		if ping_timer <= 0.0:
+			get_tree().call_group("enemies", "investigate", player.global_position)
+			ping_timer = 2.0
+	
 	if not visible :
 		return
+	
 	var map_pos = player.global_position * map_scale
 	cam.position = map_pos
 	marker.position = map_pos
