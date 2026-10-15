@@ -93,16 +93,17 @@ texture = ExtResource("8_n0d4k")
 sources/0 = SubResource("TileSetAtlasSource_n0d4k")
 
 [sub_resource type="Gradient" id="Gradient_yt64p"]
-offsets = PackedFloat32Array(0.20913461, 0.7379808)
+offsets = PackedFloat32Array(0, 0.75721157)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3hfh6"]
 gradient = SubResource("Gradient_yt64p")
+width = 96
+height = 96
 fill = 1
-fill_from = Vector2(0.49131945, 0.49479166)
+fill_from = Vector2(0.515625, 0.5086806)
 
 [sub_resource type="Gradient" id="Gradient_n0d4k"]
-interpolation_mode = 1
 offsets = PackedFloat32Array(0.5264423, 0.8485577)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
@@ -318,15 +319,25 @@ code = "shader_type canvas_item;
 
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
 
+// Light below this brightness shows nothing (fully dark)
+uniform float fade_start : hint_range(0.0, 1.0) = 0.0;
+// Light at or above this brightness shows the full screen pixel
+uniform float fade_end : hint_range(0.0, 1.0) = 1.0;
+
 void light(){
-	LIGHT.rgb = vec3(0);
-	if(LIGHT_COLOR == vec4(1)){
-		LIGHT = texture(SCREEN_TEXTURE, SCREEN_UV);
-	}
+	// min() of the channels means only white-ish light counts,
+	// so a colored light won't trigger the reveal
+	float brightness = min(LIGHT_COLOR.r, min(LIGHT_COLOR.g, LIGHT_COLOR.b));
+
+	float amount = smoothstep(fade_start, fade_end, brightness);
+
+	LIGHT = vec4(texture(SCREEN_TEXTURE, SCREEN_UV).rgb * amount, 1.0);
 }"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_n0d4k"]
 shader = SubResource("Shader_04ggp")
+shader_parameter/fade_start = 0.0
+shader_parameter/fade_end = 1.0
 
 [node name="test_level" type="Node2D" unique_id=622526895]
 
