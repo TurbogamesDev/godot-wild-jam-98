@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cehg85aas53yo" path="res://assets/scenes/characters/player.tscn" id="1_yt64p"]
 [ext_resource type="Texture2D" uid="uid://dci1dk4bxeppm" path="res://assets/sprites/Tilemaps/building_1png.png" id="2_aruyh"]
 [ext_resource type="PackedScene" uid="uid://c5e5bd2onbxr8" path="res://assets/scenes/characters/signal_tower.tscn" id="3_n0d4k"]
-[ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/signal-related/map_ui.gd" id="4_04ggp"]
+[ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_04ggp"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_fxlw6"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="6_y7eue"]
 [ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
@@ -120,8 +120,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_0ijch"]
 gradient = SubResource("Gradient_n0d4k")
-width = 192
-height = 192
+width = 256
+height = 256
 fill = 1
 fill_from = Vector2(0.5121528, 0.5190972)
 fill_to = Vector2(0.8732639, 0.09548611)
@@ -462,11 +462,9 @@ texture = ExtResource("6_y7eue")
 player = NodePath("../../player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
-visible = false
 light_mask = 2
 z_index = 10
 material = SubResource("ShaderMaterial_n0d4k")
