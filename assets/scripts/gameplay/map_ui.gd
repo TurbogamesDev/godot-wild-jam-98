@@ -21,6 +21,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("toggle_map") and is_in_range:
 		player.visible = not player.visible
 		visible = not visible
+		#Alert the enemies of your position
+		get_tree().call_group("enemies", "investigate", player.global_position)
 		get_tree().paused = visible
 		get_viewport().set_input_as_handled()
 
