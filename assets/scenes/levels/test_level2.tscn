@@ -22,6 +22,12 @@ fill = 1
 fill_from = Vector2(0.5260417, 0.5086806)
 fill_to = Vector2(0.5399306, 0)
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_n0d4k"]
+vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)])
+agent_radius = 0.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n0d4k"]
 texture = ExtResource("8_n0d4k")
 0:0/0 = 0
@@ -31,7 +37,9 @@ texture = ExtResource("8_n0d4k")
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
+6:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_n0d4k")
 7:0/0 = 0
+7:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_n0d4k")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -39,7 +47,9 @@ texture = ExtResource("8_n0d4k")
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
+6:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_n0d4k")
 7:1/0 = 0
+7:1/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_n0d4k")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
@@ -90,6 +100,7 @@ texture = ExtResource("8_n0d4k")
 7:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ggla2"]
+navigation_layer_0/layers = 1
 sources/0 = SubResource("TileSetAtlasSource_n0d4k")
 
 [sub_resource type="Gradient" id="Gradient_yt64p"]
@@ -380,7 +391,6 @@ texture = SubResource("GradientTexture2D_3hfh6")
 
 [node name="FieldOfView" type="PointLight2D" parent="player" unique_id=1233129259]
 range_item_cull_mask = 2
-shadow_enabled = true
 texture = SubResource("GradientTexture2D_0ijch")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=946592971]
@@ -452,9 +462,11 @@ texture = ExtResource("6_y7eue")
 player = NodePath("../../player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
+visible = false
 light_mask = 2
 z_index = 10
 material = SubResource("ShaderMaterial_n0d4k")
