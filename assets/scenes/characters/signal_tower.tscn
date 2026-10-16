@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5e5bd2onbxr8"]
 
-[ext_resource type="Script" uid="uid://bivxeoc8fvifl" path="res://assets/scripts/signal-related/signal_tower.gd" id="1_tnm16"]
+[ext_resource type="Script" uid="uid://bivxeoc8fvifl" path="res://assets/scripts/gameplay/signal_tower.gd" id="1_tnm16"]
 [ext_resource type="Texture2D" uid="uid://bd5fvyt2e4jc" path="res://assets/sprites/Placeholders/friis-radar-333574.png" id="2_bpkwn"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="2_tnm16"]
 

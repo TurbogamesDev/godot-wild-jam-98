@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://d1bdhu0st2orp"]
+
+[ext_resource type="Script" uid="uid://q5o32xtvomvf" path="res://assets/scripts/gameplay/enemy.gd" id="1_gx0oh"]
+[ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="1_pr8u0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3hfh6"]
+radius = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qui0"]
+radius = 18.61907
+
+[sub_resource type="Gradient" id="Gradient_yt64p"]
+offsets = PackedFloat32Array(0, 0.75721157)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_gx0oh"]
+gradient = SubResource("Gradient_yt64p")
+width = 96
+height = 96
+fill = 1
+fill_from = Vector2(0.515625, 0.5086806)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1954471988]
+script = ExtResource("1_gx0oh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114232854]
+position = Vector2(0, -16)
+texture = ExtResource("1_pr8u0")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=271923362]
+path_desired_distance = 12.0
+target_desired_distance = 12.0
+path_postprocessing = 1
+
+[node name="SightArea" type="Area2D" parent="." unique_id=1104976068]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SightArea" unique_id=454529993]
+position = Vector2(1, -14)
+shape = SubResource("CircleShape2D_3hfh6")
+
+[node name="CatchArea" type="Area2D" parent="." unique_id=2010978098]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CatchArea" unique_id=1068996854]
+position = Vector2(0.42404175, -13.266319)
+shape = SubResource("CircleShape2D_0qui0")
+
+[node name="ProxyVision" type="PointLight2D" parent="." unique_id=1906545068]
+position = Vector2(0, -14)
+texture = SubResource("GradientTexture2D_gx0oh")

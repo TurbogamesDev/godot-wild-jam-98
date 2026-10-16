@@ -7,6 +7,7 @@ class_name Player
 signal signal_changed(has_signal: bool)
 
 var signal_zones := 0
+var map_open := false
 var has_signal := false
 ## Signal related functions
 
@@ -29,6 +30,12 @@ func _ready():
 	_animated_sprite.play("front")
 
 func _physics_process(_delta: float) -> void:
+	#Disables player movement while map is open
+	if map_open:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
+	#Player movement
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	move_and_slide()

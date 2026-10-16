@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cehg85aas53yo" path="res://assets/scenes/characters/player.tscn" id="1_cxbqx"]
 [ext_resource type="Texture2D" uid="uid://dci1dk4bxeppm" path="res://assets/sprites/Tilemaps/building_1png.png" id="2_lutq8"]
 [ext_resource type="PackedScene" uid="uid://c5e5bd2onbxr8" path="res://assets/scenes/characters/signal_tower.tscn" id="3_nd8wk"]
-[ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/signal-related/map_ui.gd" id="4_nll7m"]
+[ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_nll7m"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="5_00oio"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_lutq8"]
 [ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_lutq8"]
