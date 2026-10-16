@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_d2kkn"]
 [ext_resource type="PackedScene" uid="uid://l3cbwgo7cb1b" path="res://assets/scenes/ui/control_remap_item.tscn" id="1_syw1e"]
 [ext_resource type="PackedScene" uid="uid://dnelf82owdqyt" path="res://assets/scenes/ui/close_button.tscn" id="3_4jyve"]
+[ext_resource type="PackedScene" uid="uid://bd8sxco0c4b1s" path="res://assets/scenes/ui/volume_control_item.tscn" id="3_bveri"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xepy2"]
 bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
@@ -39,23 +40,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Background" type="ColorRect" parent="." unique_id=663702753]
+z_index = -5
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+mouse_filter = 1
 color = Color(0.32156864, 0.32156864, 0.32156864, 0.6666667)
 
 [node name="Panel" type="Panel" parent="." unique_id=328916369]
-z_index = 10
 layout_mode = 0
 offset_left = 384.0
 offset_top = 64.0
 offset_right = 768.0
 offset_bottom = 576.0
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_xepy2")
 
 [node name="CloseButton" parent="Panel" unique_id=1812870772 node_paths=PackedStringArray("controlToClose") instance=ExtResource("3_4jyve")]
+z_index = 1
 layout_mode = 0
 offset_left = 352.0
 offset_right = 384.0
@@ -65,52 +70,67 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_4jyve")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_bveri")
 controlToClose = NodePath("../..")
 
-[node name="Section_1" type="Label" parent="Panel" unique_id=589778024]
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=643240062]
+z_index = 5
 layout_mode = 0
 offset_top = 32.0
 offset_right = 384.0
-offset_bottom = 96.0
+offset_bottom = 510.0
+scroll_hint_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/ScrollContainer" unique_id=546537141]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Section_A" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1620192255]
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_qc24j")
+text = "Audio"
+label_settings = SubResource("LabelSettings_8dto7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A1_VolumeControlItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=158876102 instance=ExtResource("3_bveri")]
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Section_B" type="Label" parent="Panel/ScrollContainer/VBoxContainer" unique_id=589778024]
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_qc24j")
 text = "Keybinds"
 label_settings = SubResource("LabelSettings_8dto7")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ControlRemapItem_1" parent="Panel/Section_1" unique_id=158876102 instance=ExtResource("1_syw1e")]
+[node name="B1_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=21356073 instance=ExtResource("1_syw1e")]
 z_index = 30
-layout_mode = 1
-offset_top = 64.0
-offset_right = 0.0
-offset_bottom = 64.0
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 actionName = "up"
 
-[node name="ControlRemapItem_2" parent="Panel/Section_1" unique_id=934737344 instance=ExtResource("1_syw1e")]
+[node name="B2_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=934737344 instance=ExtResource("1_syw1e")]
 z_index = 30
-layout_mode = 1
-offset_top = 128.0
-offset_right = 0.0
-offset_bottom = 128.0
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 actionName = "left"
 
-[node name="ControlRemapItem_3" parent="Panel/Section_1" unique_id=571474417 instance=ExtResource("1_syw1e")]
+[node name="B3_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=571474417 instance=ExtResource("1_syw1e")]
 z_index = 30
-layout_mode = 1
-offset_top = 192.0
-offset_right = 0.0
-offset_bottom = 192.0
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 
-[node name="ControlRemapItem_4" parent="Panel/Section_1" unique_id=1480078039 instance=ExtResource("1_syw1e")]
+[node name="B4_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=1480078039 instance=ExtResource("1_syw1e")]
 z_index = 30
-layout_mode = 1
-offset_top = 256.0
-offset_right = 0.0
-offset_bottom = 256.0
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 actionName = "right"
 
-[node name="ControlRemapItem_5" parent="Panel/Section_1" unique_id=84844192 instance=ExtResource("1_syw1e")]
+[node name="B5_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=84844192 instance=ExtResource("1_syw1e")]
 z_index = 30
-layout_mode = 1
-offset_top = 320.0
-offset_right = 0.0
-offset_bottom = 320.0
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
 actionName = "toggle_map"

@@ -107,4 +107,5 @@ settingsMenuScene = NodePath("../../SettingsMenu")
 
 [node name="SettingsMenu" parent="." unique_id=860343429 instance=ExtResource("5_v71do")]
 visible = false
+z_as_relative = true
 layout_mode = 1
