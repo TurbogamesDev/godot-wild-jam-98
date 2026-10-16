@@ -3,19 +3,14 @@
 [ext_resource type="Script" uid="uid://q5o32xtvomvf" path="res://assets/scripts/gameplay/enemy.gd" id="1_gx0oh"]
 [ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="1_pr8u0"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3hfh6"]
-radius = 3.0
-height = 10.0
-
 [node name="Enemy" type="CharacterBody2D" unique_id=1954471988]
 script = ExtResource("1_gx0oh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114232854]
+position = Vector2(0, -16)
 texture = ExtResource("1_pr8u0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=446824236]
-shape = SubResource("CapsuleShape2D_3hfh6")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=271923362]
 path_desired_distance = 12.0
 target_desired_distance = 12.0
+path_postprocessing = 1

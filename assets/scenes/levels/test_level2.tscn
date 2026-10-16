@@ -470,6 +470,7 @@ texture = ExtResource("6_y7eue")
 player = NodePath("../../player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
