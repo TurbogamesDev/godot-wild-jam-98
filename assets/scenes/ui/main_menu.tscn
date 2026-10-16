@@ -81,7 +81,7 @@ offset_left = 8.0
 offset_top = 32.0
 offset_right = 216.0
 offset_bottom = 86.0
-text = "GWD #98"
+text = "GWJ #98"
 label_settings = SubResource("LabelSettings_57ux2")
 horizontal_alignment = 1
 
