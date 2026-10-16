@@ -3,10 +3,10 @@ extends CharacterBody2D
 enum State { WANDER, INVESTIGATE, CHASE }
 
 @export var wander_speed := 40.0
-@export var investigate_speed := 60.0
-@export var chase_speed := 80.0
+@export var investigate_speed := 120.0
+@export var chase_speed := 75.0
 @export var lose_sight_time := 1.5
-@export var hear_range := 320.0
+@export var hear_range := 48000.0
 
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var sight: Area2D = $SightArea

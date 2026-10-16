@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="1_pr8u0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3hfh6"]
-radius = 43.0
+radius = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0qui0"]
 radius = 18.61907
