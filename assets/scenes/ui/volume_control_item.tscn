@@ -47,6 +47,7 @@ max_value = 200.0
 step = 10.0
 value = 100.0
 tick_count = 5
+ticks_on_borders = true
 
 [node name="MaxValue" type="Label" parent="." unique_id=1945055617]
 layout_mode = 1
