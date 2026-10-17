@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://chjn3vliai6j7"]
 
+[ext_resource type="Script" uid="uid://btpvg2df2dwr5" path="res://assets/scripts/ui_script/game_input_handler.gd" id="1_y7eue"]
 [ext_resource type="PackedScene" uid="uid://cehg85aas53yo" path="res://assets/scenes/characters/player.tscn" id="1_yt64p"]
 [ext_resource type="Texture2D" uid="uid://dci1dk4bxeppm" path="res://assets/sprites/Tilemaps/building_1png.png" id="2_aruyh"]
 [ext_resource type="Texture2D" uid="uid://bw8qls4t3xqbh" path="res://assets/sprites/Tilemaps/spritesheet modified.png" id="2_fxlw6"]
@@ -8,9 +9,10 @@
 [ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_04ggp"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_fxlw6"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="6_y7eue"]
-[ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
+[ext_resource type="PackedScene" uid="uid://3rd1svyqksir" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
 [ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="8_aruyh"]
 [ext_resource type="Texture2D" uid="uid://blnao66mwvune" path="res://assets/sprites/Tilemaps/Building2TileMap.png" id="8_n0d4k"]
+[ext_resource type="PackedScene" uid="uid://bb2p0mvpywl2e" path="res://assets/scenes/ui/settings_menu.tscn" id="13_linip"]
 
 [sub_resource type="Gradient" id="Gradient_aruyh"]
 offsets = PackedFloat32Array(0, 0.6418269)
@@ -580,7 +582,9 @@ shader = SubResource("Shader_04ggp")
 shader_parameter/fade_start = 0.0
 shader_parameter/fade_end = 1.0
 
-[node name="test_level" type="Node2D" unique_id=622526895]
+[node name="test_level" type="Node2D" unique_id=622526895 node_paths=PackedStringArray("settingsMenu")]
+script = ExtResource("1_y7eue")
+settingsMenu = NodePath("UI/SettingsMenu")
 
 [node name="Lights" type="Node" parent="." unique_id=841060932]
 
@@ -686,11 +690,6 @@ position = Vector2(473, 348)
 scale = Vector2(0.84374976, 1)
 texture = ExtResource("6_y7eue")
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=1211191958]
-
-[node name="LevelHUD" parent="UI" unique_id=2049856995 node_paths=PackedStringArray("player") instance=ExtResource("7_linip")]
-player = NodePath("../../player")
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
 color = Color(0, 0, 0, 1)
 
@@ -717,5 +716,13 @@ player = NodePath("../player")
 [node name="Enemy3" parent="." unique_id=411608379 node_paths=PackedStringArray("player") instance=ExtResource("3_04ggp")]
 position = Vector2(1452, 463)
 player = NodePath("../player")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1211191958]
+
+[node name="LevelHUD" parent="UI" unique_id=2049856995 node_paths=PackedStringArray("player") instance=ExtResource("7_linip")]
+player = NodePath("../../player")
+
+[node name="SettingsMenu" parent="UI" unique_id=860343429 instance=ExtResource("13_linip")]
+visible = false
 
 [connection signal="signal_changed" from="player" to="CanvasLayer/MapUI" method="_on_player_signal_changed"]
