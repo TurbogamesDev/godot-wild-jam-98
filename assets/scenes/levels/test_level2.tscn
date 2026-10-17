@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_04ggp"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_fxlw6"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="6_y7eue"]
-[ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
+[ext_resource type="PackedScene" uid="uid://3rd1svyqksir" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
 [ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="8_aruyh"]
 [ext_resource type="Texture2D" uid="uid://blnao66mwvune" path="res://assets/sprites/Tilemaps/Building2TileMap.png" id="8_n0d4k"]
 
@@ -476,13 +476,23 @@ position = Vector2(999.75183, 557.8611)
 scale = Vector2(-16.58264, -9.481946)
 texture = ExtResource("8_aruyh")
 
-[node name="Enemy2" parent="." unique_id=1655998243 instance=ExtResource("3_04ggp")]
-position = Vector2(327.21655, 709.54346)
+[node name="Enemy5" parent="." unique_id=1954471988 node_paths=PackedStringArray("player") instance=ExtResource("3_04ggp")]
+position = Vector2(1333, 791)
+player = NodePath("../player")
 
-[node name="Enemy4" parent="." unique_id=1954471988 instance=ExtResource("3_04ggp")]
+[node name="Enemy2" parent="." unique_id=1655998243 node_paths=PackedStringArray("player") instance=ExtResource("3_04ggp")]
+position = Vector2(743, 861)
+enemy_type = 2
+player = NodePath("../player")
+
+[node name="Enemy4" parent="." unique_id=582487823 node_paths=PackedStringArray("player") instance=ExtResource("3_04ggp")]
 position = Vector2(536.6905, 225.95554)
+enemy_type = 3
+player = NodePath("../player")
 
-[node name="Enemy3" parent="." unique_id=411608379 instance=ExtResource("3_04ggp")]
-position = Vector2(862.9424, 326.61264)
+[node name="Enemy3" parent="." unique_id=411608379 node_paths=PackedStringArray("player") instance=ExtResource("3_04ggp")]
+position = Vector2(1452, 463)
+enemy_type = 1
+player = NodePath("../player")
 
 [connection signal="signal_changed" from="player" to="CanvasLayer/MapUI" method="_on_player_signal_changed"]
