@@ -12,11 +12,13 @@ enum State { WANDER, INVESTIGATE, CHASE }
 @onready var sight: Area2D = $SightArea
 @onready var catch: Area2D = $CatchArea
 
+@export var player: Node2D  # Only set while the player is inside the circle
 var state := State.WANDER   # Switch between states easier idk
-@export var player: Node2D          # Only set while the player is inside the circle
 var lost_timer := 1.0       # Time the enemy sits still after losing you
 
 var player_in_sight: bool = false
+
+const LOSE_SCREEN := "res://assets/scenes/ui/death_screen.tscn"
 
 func _ready() -> void:
 	add_to_group("enemies") # Connecting different things
@@ -38,7 +40,7 @@ func _on_sight_exited(body: Node2D) -> void:
 # Lose function
 func _on_catch_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		print("you are dead")
+		get_tree().change_scene_to_file(LOSE_SCREEN)
 
 # Investigate the map ping if relatively close
 func investigate(pos: Vector2) -> void:
