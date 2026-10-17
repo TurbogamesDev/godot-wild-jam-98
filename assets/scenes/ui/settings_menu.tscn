@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_d2kkn"]
 [ext_resource type="PackedScene" uid="uid://l3cbwgo7cb1b" path="res://assets/scenes/ui/control_remap_item.tscn" id="1_syw1e"]
+[ext_resource type="Script" uid="uid://brpf6c5i1fm02" path="res://assets/scripts/ui_script/settings_menu.gd" id="1_xbufs"]
 [ext_resource type="PackedScene" uid="uid://dnelf82owdqyt" path="res://assets/scenes/ui/close_button.tscn" id="3_4jyve"]
 [ext_resource type="PackedScene" uid="uid://bd8sxco0c4b1s" path="res://assets/scenes/ui/volume_control_item.tscn" id="3_bveri"]
 
@@ -41,6 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+script = ExtResource("1_xbufs")
 
 [node name="Background" type="ColorRect" parent="." unique_id=663702753]
 z_index = -5
