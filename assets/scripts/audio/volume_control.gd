@@ -2,8 +2,8 @@ extends Control
 class_name VolumeControlItem
 
 enum AUDIO_TYPE_ENUM {
-    BGM,
-    SFX
+	BGM,
+	SFX
 }
 
 const BGM_LABEL_TEXT = "BGM Vol."
@@ -16,15 +16,15 @@ const SFX_LABEL_TEXT = "SFX Vol."
 @export var slider: HSlider
 
 func _ready() -> void:
-    if audio_type == AUDIO_TYPE_ENUM.BGM:
-        label.text = BGM_LABEL_TEXT
+	if audio_type == AUDIO_TYPE_ENUM.BGM:
+		label.text = BGM_LABEL_TEXT
 
-    elif audio_type == AUDIO_TYPE_ENUM.SFX:
-        label.text = SFX_LABEL_TEXT
+	elif audio_type == AUDIO_TYPE_ENUM.SFX:
+		label.text = SFX_LABEL_TEXT
 
 func _on_h_slider_value_changed(value: float) -> void:
-    if audio_type == AUDIO_TYPE_ENUM.BGM:
-        BackgroundMusicManager.volume_linear = (value / 100) * volume_multiplier   # the "/ 100" is written in the blood of my ears
+	if audio_type == AUDIO_TYPE_ENUM.BGM:
+		BackgroundMusicManager.volume_linear = (value / 100) * volume_multiplier   # the "/ 100" is written in the blood of my ears
 
-    elif audio_type == AUDIO_TYPE_ENUM.SFX:
-        pass
+	elif audio_type == AUDIO_TYPE_ENUM.SFX:
+		pass
