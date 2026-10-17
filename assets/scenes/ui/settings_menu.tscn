@@ -131,8 +131,14 @@ custom_minimum_size = Vector2(376, 64)
 layout_mode = 2
 actionName = "right"
 
-[node name="B5_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=84844192 instance=ExtResource("1_syw1e")]
+[node name="B5_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=544913615 instance=ExtResource("1_syw1e")]
 z_index = 30
 custom_minimum_size = Vector2(376, 64)
 layout_mode = 2
 actionName = "toggle_map"
+
+[node name="B6_ControlRemapItem" parent="Panel/ScrollContainer/VBoxContainer" unique_id=84844192 instance=ExtResource("1_syw1e")]
+z_index = 30
+custom_minimum_size = Vector2(376, 64)
+layout_mode = 2
+actionName = "settings"
