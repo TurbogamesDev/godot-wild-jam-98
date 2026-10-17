@@ -14,7 +14,7 @@ enum State { WANDER, INVESTIGATE, CHASE }
 
 @export var player: Node2D  # Only set while the player is inside the circle
 var state := State.WANDER   # Switch between states easier idk
-var lost_timer := 1.0       # Time the enemy sits still after losing you
+var lost_timer := 1.5       # Time the enemy sits still after losing you
 
 var player_in_sight: bool = false
 
@@ -26,7 +26,7 @@ func _ready() -> void:
 	sight.body_exited.connect(_on_sight_exited)
 	catch.body_entered.connect(_on_catch_entered)
 	nav.navigation_finished.connect(_on_arrived)
-	_pick_wander_target()  # Making the enemy wander at the start
+	nav.target_position = self.global_position
 
 #Updating the player variable while in line of sight to chase it
 func _on_sight_entered(body: Node2D) -> void:
@@ -81,12 +81,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_arrived() -> void: # When it finishes INVESTIGATE
 	if state != State.CHASE:
-		state = State.WANDER
 		_pick_wander_target()
+		state = State.WANDER
 
 func _pick_wander_target() -> void:
-	var start_point: Vector2 = lerp(player.global_position, Vector2(1250.0, 150.0), randf())
+	var start_point: Vector2 = lerp(player.global_position, Vector2(1250.0, 150.0), (randf() * 1.5) - 0.5)
 	# Calculates some random point near it
 	var point := start_point + Vector2.from_angle(randf() * TAU) * randf_range(0.0, 64.0)
 	# Checks the closest valid position it can wander to near that point
-	nav.target_position = NavigationServer2D.map_get_closest_point(nav.get_navigation_map(), point)
+	var closest_point: Vector2 = NavigationServer2D.map_get_closest_point(nav.get_navigation_map(), point)
+	print("wandering to %s" % point)
+	nav.target_position = closest_point
