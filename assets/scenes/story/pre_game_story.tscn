@@ -39,6 +39,7 @@ text = "a good introduction...?"
 label_settings = SubResource("LabelSettings_xepy2")
 
 [node name="BodyText" type="Label" parent="." unique_id=1338136747]
+custom_maximum_size = Vector2(1120, 392)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 120.0
@@ -66,3 +67,4 @@ offset_top = 536.0
 offset_right = 1096.0
 offset_bottom = 600.0
 button_text = "Next"
+scene_path = "res://assets/scenes/story/tutorial.tscn"
