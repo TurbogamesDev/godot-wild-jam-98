@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://csemtc25w7xj8"]
+
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_e77oy"]
+[ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="2_n7efs"]
+[ext_resource type="FontFile" uid="uid://dv4a1gtexq6r6" path="res://assets/fonts/Space_Mono/SpaceMono-Italic.ttf" id="2_uqo72"]
+[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/ui/switch_scene_button.tscn" id="3_n7efs"]
+[ext_resource type="Texture2D" uid="uid://ddrqwciyh88bk" path="res://assets/sprites/Placeholders/cell_tower_demo.png" id="4_n7efs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("1_e77oy")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_qc24j"]
+line_spacing = -4.0
+font = ExtResource("2_uqo72")
+font_size = 24
+
+[node name="Tutorial" type="Control" unique_id=61984410]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=50528060]
+z_index = -50
+z_as_relative = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.32321265, 0.32321244, 0.3232125, 1)
+
+[node name="Heading" type="Label" parent="." unique_id=1943534385]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 39.0
+text = "Tutorial"
+label_settings = SubResource("LabelSettings_xepy2")
+
+[node name="A_Image" type="TextureRect" parent="." unique_id=1418516713]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 152.0
+offset_right = 272.0
+offset_bottom = 392.0
+texture = ExtResource("2_n7efs")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="A_BodyText" type="Label" parent="." unique_id=1338136747]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 416.0
+offset_right = 350.0
+offset_bottom = 456.0
+text = "Run from these guys"
+label_settings = SubResource("LabelSettings_qc24j")
+
+[node name="B_Image" type="TextureRect" parent="." unique_id=900468829]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 408.0
+offset_top = 160.0
+offset_right = 624.0
+offset_bottom = 388.7059
+texture = ExtResource("4_n7efs")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="B_BodyText" type="Label" parent="." unique_id=859373338]
+custom_maximum_size = Vector2(416, 224)
+layout_mode = 0
+offset_left = 656.0
+offset_top = 160.0
+offset_right = 1072.0
+offset_bottom = 384.0
+text = "Find cell towers to get signal! Once connected press M to open a map. Beware, this sends your location to the chasers..."
+label_settings = SubResource("LabelSettings_qc24j")
+autowrap_mode = 3
+
+[node name="C_BodyText" type="Label" parent="." unique_id=469108507]
+custom_maximum_size = Vector2(416, 224)
+layout_mode = 0
+offset_left = 392.0
+offset_top = 416.0
+offset_right = 808.0
+offset_bottom = 516.0
+text = "Get to the exit (marked by yellow on the map) and escape!"
+label_settings = SubResource("LabelSettings_qc24j")
+autowrap_mode = 3
+
+[node name="SwitchSceneButton" parent="." unique_id=2067039380 instance=ExtResource("3_n7efs")]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 536.0
+offset_right = 1096.0
+offset_bottom = 600.0
+button_text = "Play"
+scene_path = "res://assets/scenes/levels/test_level2.tscn"
+play_igm_after_click = true
