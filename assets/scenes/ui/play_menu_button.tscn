@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://tdimt6elbj6d"]
-
-[ext_resource type="PackedScene" uid="uid://blm73icgjxwy3" path="res://assets/scenes/ui/base_menu_button.tscn" id="1_33d5f"]
-[ext_resource type="Script" uid="uid://cexk5lkbuqea7" path="res://assets/scripts/ui_script/play_menu_button.gd" id="2_33d5f"]
-
-[node name="PlayMenuButton" unique_id=2067039380 instance=ExtResource("1_33d5f")]
-script = ExtResource("2_33d5f")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]
