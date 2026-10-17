@@ -4,19 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="1_pr8u0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3hfh6"]
-radius = 64.0
+radius = 42.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0qui0"]
 radius = 18.61907
 
 [sub_resource type="Gradient" id="Gradient_yt64p"]
 offsets = PackedFloat32Array(0, 0.75721157)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.6666667, 0.6666667, 0.6666667, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_gx0oh"]
 gradient = SubResource("Gradient_yt64p")
-width = 96
-height = 96
+width = 144
+height = 144
 fill = 1
 fill_from = Vector2(0.515625, 0.5086806)
 

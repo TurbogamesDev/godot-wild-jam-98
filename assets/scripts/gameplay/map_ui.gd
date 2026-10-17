@@ -12,7 +12,7 @@ var ping_timer := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	cam.zoom = Vector2(1.5, 1.5)
+	cam.zoom = Vector2(1.25, 1.25)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	visible = false
 
@@ -25,7 +25,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		#Alert the enemies when map OPENS
 		
 		if visible:
-			get_tree().call_group("enemies", "investigate", player.global_position)
+			var current_pos = player.global_position
+
+			await get_tree().create_timer(1.5).timeout
+			get_tree().call_group("enemies", "investigate", current_pos)
 		get_viewport().set_input_as_handled()
 
 func _on_player_signal_changed(has_signal: bool) -> void:
