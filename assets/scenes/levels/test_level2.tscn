@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_04ggp"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_fxlw6"]
 [ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="6_y7eue"]
-[ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
+[ext_resource type="PackedScene" uid="uid://3rd1svyqksir" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
 [ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="8_aruyh"]
 [ext_resource type="Texture2D" uid="uid://blnao66mwvune" path="res://assets/sprites/Tilemaps/Building2TileMap.png" id="8_n0d4k"]
 [ext_resource type="Script" uid="uid://cf6msnblml58o" path="res://assets/scripts/ui_script/maze_win.gd" id="12_y7eue"]
@@ -183,8 +183,8 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3hfh6"]
 gradient = SubResource("Gradient_04ggp")
-width = 96
-height = 96
+width = 160
+height = 160
 fill = 1
 fill_from = Vector2(0.515625, 0.5086806)
 
@@ -696,11 +696,9 @@ texture = ExtResource("6_y7eue")
 player = NodePath("../../player")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
-visible = false
 light_mask = 2
 z_index = 10
 material = SubResource("ShaderMaterial_n0d4k")
