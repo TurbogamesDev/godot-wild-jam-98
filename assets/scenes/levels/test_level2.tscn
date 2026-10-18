@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://c5e5bd2onbxr8" path="res://assets/scenes/characters/signal_tower.tscn" id="3_n0d4k"]
 [ext_resource type="Script" uid="uid://b8u3mp238ubgc" path="res://assets/scripts/gameplay/map_ui.gd" id="4_04ggp"]
 [ext_resource type="Texture2D" uid="uid://cnhfeponimi72" path="res://assets/sprites/Placeholders/map_guipdn.png" id="5_fxlw6"]
-[ext_resource type="Texture2D" uid="uid://c51gnve6da77d" path="res://assets/sprites/Placeholders/tower-placeholder.png" id="6_y7eue"]
 [ext_resource type="PackedScene" uid="uid://djtxrgbi6w7cw" path="res://assets/scenes/ui/level_hud.tscn" id="7_linip"]
 [ext_resource type="Texture2D" uid="uid://b6i2mqe8rpaow" path="res://icon.svg" id="8_aruyh"]
 [ext_resource type="Texture2D" uid="uid://blnao66mwvune" path="res://assets/sprites/Tilemaps/Building2TileMap.png" id="8_n0d4k"]
+[ext_resource type="Texture2D" uid="uid://bh8ekus1flba8" path="res://assets/sprites/Placeholders/circle.png" id="9_0mu0w"]
 [ext_resource type="Script" uid="uid://cf6msnblml58o" path="res://assets/scripts/ui_script/maze_win.gd" id="12_y7eue"]
 [ext_resource type="PackedScene" uid="uid://bb2p0mvpywl2e" path="res://assets/scenes/ui/settings_menu.tscn" id="13_linip"]
 
@@ -693,8 +693,8 @@ limit_bottom = 1080
 
 [node name="Marker" type="Sprite2D" parent="CanvasLayer/MapUI/SubViewportContainer/SubViewport" unique_id=1831322316]
 position = Vector2(473, 348)
-scale = Vector2(0.84374976, 1)
-texture = ExtResource("6_y7eue")
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("9_0mu0w")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
 color = Color(0, 0, 0, 1)
