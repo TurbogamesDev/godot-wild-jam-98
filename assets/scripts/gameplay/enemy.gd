@@ -8,7 +8,7 @@ enum State { WANDER, INVESTIGATE, CHASE }
 @export var lose_sight_time := 1.5
 @export var hear_range := 480.0
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $Sprite2D
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var sight: Area2D = $SightArea
 @onready var catch: Area2D = $CatchArea
@@ -22,6 +22,7 @@ var player_in_sight: bool = false
 const LOSE_SCREEN := "res://assets/scenes/ui/death_screen.tscn"
 
 func _ready() -> void:
+	sprite.play("default")
 	add_to_group("enemies") # Connecting different things
 	sight.body_entered.connect(_on_sight_entered)
 	sight.body_exited.connect(_on_sight_exited)
