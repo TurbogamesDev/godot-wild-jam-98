@@ -8,6 +8,7 @@ enum State { WANDER, INVESTIGATE, CHASE }
 @export var lose_sight_time := 1.5
 @export var hear_range := 480.0
 
+@onready var sprite: Sprite2D = $Sprite2D
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 @onready var sight: Area2D = $SightArea
 @onready var catch: Area2D = $CatchArea
@@ -82,7 +83,9 @@ func _physics_process(delta: float) -> void:
 		speed = chase_speed
 	var next_pos := nav.get_next_path_position()
 	velocity = global_position.direction_to(next_pos) * speed
+	var direction := velocity
 	move_and_slide()
+	update_animation(direction)
 
 func _on_arrived() -> void: # When it finishes INVESTIGATE
 	if state != State.CHASE:
@@ -95,5 +98,8 @@ func _pick_wander_target() -> void:
 	var point := start_point + Vector2.from_angle(randf() * TAU) * randf_range(0.0, 64.0)
 	# Checks the closest valid position it can wander to near that point
 	var closest_point: Vector2 = NavigationServer2D.map_get_closest_point(nav.get_navigation_map(), point)
-	print("wandering to %s" % point)
 	nav.target_position = closest_point
+
+func update_animation(direction: Vector2) -> void:
+	if direction:
+		sprite.flip_h = direction.x < 0
