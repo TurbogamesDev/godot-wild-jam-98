@@ -40,16 +40,16 @@ label_settings = SubResource("LabelSettings_y4gpf")
 horizontal_alignment = 1
 
 [node name="BodyText" type="Label" parent="." unique_id=1071747686]
+custom_maximum_size = Vector2(1120, 100)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 192.0
 offset_right = 1136.0
 offset_bottom = 292.0
-text = "Insert some story relavant victory message...
-a
-a"
+text = "You evaded the grasps of the wolf police, escaping the premises and venturing out into the wilderness. They still tried to hunt you down, but seeing their black money meet its boundaries, they let you off the hook."
 label_settings = SubResource("LabelSettings_qb8cc")
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ReturnToMenuButton" parent="." unique_id=2067039380 instance=ExtResource("3_u0cew")]
 layout_mode = 0
