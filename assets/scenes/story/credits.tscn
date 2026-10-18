@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dq571ye5sbuph"]
+
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_m5yt7"]
+[ext_resource type="FontFile" uid="uid://dv4a1gtexq6r6" path="res://assets/fonts/Space_Mono/SpaceMono-Italic.ttf" id="2_bq3qd"]
+[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/ui/switch_scene_button.tscn" id="3_njcpp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
+font = ExtResource("1_m5yt7")
+font_size = 64
+
+[sub_resource type="LabelSettings" id="LabelSettings_qc24j"]
+line_spacing = -4.0
+font = ExtResource("2_bq3qd")
+font_size = 24
+
+[node name="Credits" type="Control" unique_id=61984410]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=50528060]
+z_index = -50
+z_as_relative = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.32321265, 0.32321244, 0.3232125, 1)
+
+[node name="Heading" type="Label" parent="." unique_id=1943534385]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 39.0
+text = "Credits"
+label_settings = SubResource("LabelSettings_xepy2")
+
+[node name="BodyText" type="Label" parent="." unique_id=1338136747]
+custom_maximum_size = Vector2(1120, 392)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 1136.0
+offset_bottom = 476.0
+text = "Turbogames: Programming, UI Design (this too!)
+
+Arfilog: Programming, Level Design, Art
+
+IcyColes: Music, Story
+
+The_Absolute_Nerd: Main Art (Background Tiles, Cassius), Story
+
+Iridescent_Idiot: Art
+"
+label_settings = SubResource("LabelSettings_qc24j")
+autowrap_mode = 3
+
+[node name="SwitchSceneButton" parent="." unique_id=2067039380 instance=ExtResource("3_njcpp")]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 536.0
+offset_right = 1096.0
+offset_bottom = 600.0
+button_text = "Menu"
+scene_path = "res://assets/scenes/ui/main_menu.tscn"
+music_type_after_click = 2
