@@ -40,6 +40,11 @@ func _on_sight_exited(body: Node2D) -> void:
 # Lose function
 func _on_catch_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
+		BackgroundMusicManager.play_bgm(
+			BackgroundMusicManager.MUSIC_TYPE.DEFEAT,
+			false
+		)
+
 		get_tree().change_scene_to_file(LOSE_SCREEN)
 
 # Investigate the map ping if relatively close
