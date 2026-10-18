@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://df3txrd2yxpw3"]
 
-[sub_resource type="Gradient" id="Gradient_07m4a"]
-offsets = PackedFloat32Array(0.43509614, 0.81490386, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0.46494466, 0.46494466, 0.46494466, 1, 1, 1, 1, 1)
+[ext_resource type="FontFile" uid="uid://bi4e1wutdaoch" path="res://assets/fonts/Space_Mono/SpaceMono-Bold.ttf" id="1_l5c4b"]
+[ext_resource type="FontFile" uid="uid://dv4a1gtexq6r6" path="res://assets/fonts/Space_Mono/SpaceMono-Italic.ttf" id="2_rhjok"]
+[ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/ui/switch_scene_button.tscn" id="3_rhjok"]
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_n28qj"]
-gradient = SubResource("Gradient_07m4a")
-fill = 2
-fill_from = Vector2(0.5225694, 0.5086806)
+[sub_resource type="LabelSettings" id="LabelSettings_c7s1q"]
+font = ExtResource("1_l5c4b")
+font_size = 128
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqwy1"]
+line_spacing = -4.0
+font = ExtResource("2_rhjok")
+font_size = 24
 
 [node name="DeathScreen" type="Control" unique_id=1460882185]
 layout_mode = 3
@@ -17,27 +21,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1219626699]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture2D_n28qj")
+[node name="Background" type="ColorRect" parent="." unique_id=1762957094]
+z_index = -50
+z_as_relative = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.32321265, 0.32321244, 0.3232125, 1)
 
-[node name="Label" type="Label" parent="." unique_id=1661057430]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -235.0
-offset_top = -75.0
-offset_right = 382.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 96
-text = "YOU LOSE"
+[node name="Heading" type="Label" parent="." unique_id=1288565867]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 112.0
+text = "You Died..."
+label_settings = SubResource("LabelSettings_c7s1q")
+horizontal_alignment = 1
+
+[node name="BodyText" type="Label" parent="." unique_id=142798638]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 216.0
+offset_right = 1136.0
+offset_bottom = 256.0
+text = "Insert some story relavant death message..."
+label_settings = SubResource("LabelSettings_cqwy1")
+horizontal_alignment = 1
+
+[node name="ReturnToMenuButton" parent="." unique_id=2067039380 instance=ExtResource("3_rhjok")]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 352.0
+offset_right = 704.0
+offset_bottom = 416.0
+button_text = "Menu"
+scene_path = "res://assets/scenes/ui/main_menu.tscn"
+music_type_after_click = 2
+
+[node name="RestartButton" parent="." unique_id=678100906 instance=ExtResource("3_rhjok")]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 448.0
+offset_right = 704.0
+offset_bottom = 512.0
+button_text = "Restart"
+scene_path = "res://assets/scenes/levels/test_level2.tscn"
+music_type_after_click = 3

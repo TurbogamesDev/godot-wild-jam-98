@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bd8sxco0c4b1s"]
 
-[ext_resource type="Script" uid="uid://byjwmv2f403uu" path="res://assets/scenes/ui/volume_control.gd" id="1_sd1vq"]
+[ext_resource type="Script" uid="uid://byjwmv2f403uu" path="res://assets/scripts/ui_script/volume_control.gd" id="1_sd1vq"]
 [ext_resource type="FontFile" uid="uid://dnk8s1a2lu367" path="res://assets/fonts/Space_Mono/SpaceMono-Regular.ttf" id="2_ishg0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
