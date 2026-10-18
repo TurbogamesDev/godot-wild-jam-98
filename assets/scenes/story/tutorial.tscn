@@ -100,4 +100,4 @@ offset_right = 1096.0
 offset_bottom = 600.0
 button_text = "Play"
 scene_path = "res://assets/scenes/levels/test_level2.tscn"
-play_igm_after_click = true
+music_type_after_click = 3
