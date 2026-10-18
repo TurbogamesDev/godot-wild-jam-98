@@ -45,9 +45,9 @@ offset_left = 16.0
 offset_top = 120.0
 offset_right = 1136.0
 offset_bottom = 512.0
-text = "In a dark, sprawling, maze-like city of towering buildings and twisting streets, every animal has a place. Wolves rule from the top. Frogs are stuck at the bottom, with no rights and no power. The wolf police are paid off by the rich, and civil unrest is brewing. 
+text = "In a dark, sprawling, maze-like city of towering buildings and twisting streets, every animal and plant has a place. Wolves rule from the top. Vegetables are stuck at the bottom, with no rights and no power. The wolf police are paid off by the rich, and civil unrest is brewing. 
 
-You are Cassius, a frog. You found out that the wolves are planning to mind-control the lower classes. Whether you strike back or try to expose the truth, the result is the same: you're wanted, and the whole city is hunting you down. 
+You are Cassius, a Jack-O-Lantern. You found out that the wolves are planning to mind-control the lower classes. Whether you strike back or try to expose the truth, the result is the same: you're wanted, and the whole city is hunting you down. 
 
 Your map is useless without signal. Find the towers, light up the way out, and don’t get caught."
 label_settings = SubResource("LabelSettings_qc24j")
