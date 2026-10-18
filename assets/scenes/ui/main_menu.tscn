@@ -107,6 +107,15 @@ offset_right = 1088.0
 offset_bottom = 504.0
 settingsMenuScene = NodePath("../../SettingsMenu")
 
+[node name="CreditsButton" parent="ButtonsList" unique_id=9677010 instance=ExtResource("3_obrqb")]
+layout_mode = 0
+offset_left = 832.0
+offset_top = 360.0
+offset_right = 1088.0
+offset_bottom = 424.0
+button_text = "Credits"
+scene_path = "res://assets/scenes/story/credits.tscn"
+
 [node name="SettingsMenu" parent="." unique_id=860343429 instance=ExtResource("5_v71do")]
 visible = false
 z_as_relative = true

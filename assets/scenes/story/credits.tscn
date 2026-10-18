@@ -66,4 +66,3 @@ offset_right = 1096.0
 offset_bottom = 600.0
 button_text = "Menu"
 scene_path = "res://assets/scenes/ui/main_menu.tscn"
-music_type_after_click = 2
