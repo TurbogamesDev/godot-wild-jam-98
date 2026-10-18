@@ -640,13 +640,13 @@ tile_set = SubResource("TileSet_3hfh6")
 [node name="Signal_Towers_Container" type="Node2D" parent="." unique_id=201590358]
 
 [node name="Signal_Tower" parent="Signal_Towers_Container" unique_id=394025046 instance=ExtResource("3_n0d4k")]
-position = Vector2(689.45404, 453.55533)
+position = Vector2(685.71075, 460.07922)
 
 [node name="Signal_Tower2" parent="Signal_Towers_Container" unique_id=839086749 instance=ExtResource("3_n0d4k")]
-position = Vector2(1510.8774, 285.49786)
+position = Vector2(1513.9368, 286.76654)
 
 [node name="Signal_Tower3" parent="Signal_Towers_Container" unique_id=2011793040 instance=ExtResource("3_n0d4k")]
-position = Vector2(489.70908, 752.2503)
+position = Vector2(491.821, 748.1839)
 
 [node name="Signal_Tower4" parent="Signal_Towers_Container" unique_id=1789504375 instance=ExtResource("3_n0d4k")]
 position = Vector2(1236.4576, 666.5068)
