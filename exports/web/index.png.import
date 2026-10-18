@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w36vn2wktnhs"
-path="res://.godot/imported/godot-wild-jam-98.apple-touch-icon.png-8ee3f7dc97a376218d841e64dae23285.ctex"
+uid="uid://b5xhqbiwci865"
+path="res://.godot/imported/index.png-d03311572afeb237347e3aea48014cb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://exports/web/godot-wild-jam-98.apple-touch-icon.png"
-dest_files=["res://.godot/imported/godot-wild-jam-98.apple-touch-icon.png-8ee3f7dc97a376218d841e64dae23285.ctex"]
+source_file="res://exports/web/index.png"
+dest_files=["res://.godot/imported/index.png-d03311572afeb237347e3aea48014cb0.ctex"]
 
 [params]
 

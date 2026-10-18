@@ -35,19 +35,21 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 1136.0
 offset_bottom = 112.0
-text = "You Died..."
+text = "You Got Caught"
 label_settings = SubResource("LabelSettings_c7s1q")
 horizontal_alignment = 1
 
 [node name="BodyText" type="Label" parent="." unique_id=142798638]
+custom_maximum_size = Vector2(1120, 100)
 layout_mode = 0
 offset_left = 16.0
 offset_top = 216.0
 offset_right = 1136.0
 offset_bottom = 256.0
-text = "Insert some story relavant death message..."
+text = "You were caught in your tracks, and sent into the testing lab. Thanks for \"volunteering\" to be their first test subject!"
 label_settings = SubResource("LabelSettings_cqwy1")
 horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="ReturnToMenuButton" parent="." unique_id=2067039380 instance=ExtResource("3_rhjok")]
 layout_mode = 0
