@@ -697,11 +697,9 @@ scale = Vector2(0.84374976, 1)
 texture = ExtResource("6_y7eue")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1213525282]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="Fog of war" type="Sprite2D" parent="." unique_id=1268816554]
-visible = false
 light_mask = 2
 z_index = 10
 material = SubResource("ShaderMaterial_n0d4k")
