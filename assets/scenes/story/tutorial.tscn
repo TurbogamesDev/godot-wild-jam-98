@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bur07uhwih60y" path="res://assets/sprites/Placeholders/cop wolf.png" id="2_n7efs"]
 [ext_resource type="FontFile" uid="uid://dv4a1gtexq6r6" path="res://assets/fonts/Space_Mono/SpaceMono-Italic.ttf" id="2_uqo72"]
 [ext_resource type="PackedScene" uid="uid://tdimt6elbj6d" path="res://assets/scenes/ui/switch_scene_button.tscn" id="3_n7efs"]
-[ext_resource type="Texture2D" uid="uid://ddrqwciyh88bk" path="res://assets/sprites/Placeholders/cell_tower_demo.png" id="4_n7efs"]
+[ext_resource type="Texture2D" uid="uid://ui3jxse51dk2" path="res://assets/sprites/Placeholders/ss1.png" id="4_n7efs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xepy2"]
 font = ExtResource("1_e77oy")
